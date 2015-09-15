@@ -11,18 +11,18 @@
         <title></title>
     </head>
     <body>
-        <form action="index.php" method="GET">
+        <form action="index.php" method="get">
            Please enter your current grade percentage: 
            <input type="text" name="score"><br>
-           <input type="submit">
+           <input type="submit" >
       
         </form>
               <?php
             $letter = "NULL";
-            $score = $_GET['score'];
-            
+            $score = filter_input(INPUT_GET, 'score');
+        
             ?>
-        <p> Your current grade is a <?php echo $_GET['score'] ?> ,your letter grade
+        <p> Your current grade is a <?php echo $score ?> ,your letter grade
             is 
           <?php 
             if($score<0)        {$grade="You have entered an invalid grade.";
