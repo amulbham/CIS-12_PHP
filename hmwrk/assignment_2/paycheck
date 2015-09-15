@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+      <form action = "index.php" method ="get">   
+      Hours Worked: <input type="text" name="Hours" ><br>
+      Pay Rate: <input type="text" name="Pay Rate" ><br>
+      <input type = "submit">
+      </form>
+        
+       <?php
+        $hrs = filter_input(INPUT_GET, 'Hours');
+        $pRate = filter_input(INPUT_GET, 'Pay Rate');
+        $double = $pRate * 2;
+        $triple = $pRate * 3;
+        $tier1 = $hrs * $pRate;
+        $tier2 = 20 * $pRate+ (($hrs - 20) * $double);
+        $tier3 = (20 * $pRate)+ (20 * $double) + (($hrs - 40) * $triple);
+        $pcheck;
+        
+        if($hrs<=20){$pcheck = $tier1;}
+        else if ($hrs>20 && $hrs<=40){$pcheck = $tier2;}
+        else{$pcheck = $tier3;}
+        
+        echo "Your paycheck for this pay period is $" . $pcheck;
+       ?> 
+        
+    </body>
+</html>
