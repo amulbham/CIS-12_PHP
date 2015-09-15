@@ -1,0 +1,35 @@
+
+<html>
+    <?php
+    /*Amul Bham
+    Purpose: To utilize ternary operators
+    Date: 9/15/2015     */
+    
+    ?>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+            $letter = "NULL";
+            $score = $_GET['score'];
+        ?>
+        <p> Your current grade is a <?php echo $_GET['score'] ?> ,your letter grade
+            is 
+          <?php 
+            if($score<0)        {$grade="You have entered an invalid grade.";
+            }else if($score<60) { $grade="F";
+            }else if($score<70) { $grade="D";
+            }else if($score<80) { $grade="C";
+            }else if($score<90) { $grade="B";
+            }else if($score<=100){$grade="A";
+            }else{                $grade="You have entered an invalid grade.";
+            }       
+            echo $grade;
+       
+            ?>  
+        </p>
+        
+    </body>
+</html>
