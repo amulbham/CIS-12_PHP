@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-      <form action = "index.php" method ="get">   
+      <form action = "get_paycheck.php" method ="get">   
       Hours Worked: <input type="text" name="Hours" ><br>
       Pay Rate: <input type="text" name="Pay Rate" ><br>
       <input type = "submit">
