@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Truth Table</title>
 		<?php
-        	//Dr. Mark E. Lehr
+        	//Amul Bham
         	//Date:  Sept 21st, 2015
-        	//Purpose:  Logical Operators
+        	//Purpose:  Truth Table
         ?>
     </head>
     
@@ -26,7 +26,7 @@
               <td>!(X&&Y)</td>
               <td>!X||!Y</td>
               <td>!(X||Y)</td>
-              <td>!X&&!Y</td>
+              <td>(!X&&!Y)</td>
             </tr>
             <tr>
               <?php
@@ -37,15 +37,15 @@
 				  echo "<td>".(!$x?"T":"F")."</td>";
 				  echo "<td>".(!$y?"T":"F")."</td>";
 				  echo "<td>".($x&&$y?"T":"F")."</td>";
+				  echo "<td>".($x||$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$x?"T":"F")."</td>";
+				  echo "<td>".(!($x&&$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x||!$y?"T":"F")."</td>";
+				  echo "<td>".(!($x||$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x&&!$y?"T":"F")."</td>";
 			  ?>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
             </tr>
             <tr>
 			<?php
@@ -56,15 +56,15 @@
 				  echo "<td>".(!$x?"T":"F")."</td>";
 				  echo "<td>".(!$y?"T":"F")."</td>";
 				  echo "<td>".($x&&$y?"T":"F")."</td>";
+				  echo "<td>".($x||$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$x?"T":"F")."</td>";
+				  echo "<td>".(!($x&&$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x||!$y?"T":"F")."</td>";
+				  echo "<td>".(!($x||$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x&&!$y?"T":"F")."</td>";
 			  ?>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
             </tr>
             <tr>
 			  <?php
@@ -75,30 +75,37 @@
 				  echo "<td>".(!$x?"T":"F")."</td>";
 				  echo "<td>".(!$y?"T":"F")."</td>";
 				  echo "<td>".($x&&$y?"T":"F")."</td>";
+				  echo "<td>".($x||$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$x?"T":"F")."</td>";
+				  echo "<td>".(!($x&&$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x||!$y?"T":"F")."</td>";
+				  echo "<td>".(!($x||$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x&&!$y?"T":"F")."</td>";
 			  ?>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+             
             </tr>
             <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
+            <?php
+            	$x = false;
+				$y= false;
+			echo "<td>".($x?"T":"F")."</td>";
+				  echo "<td>".($y?"T":"F")."</td>";
+				  echo "<td>".(!$x?"T":"F")."</td>";
+				  echo "<td>".(!$y?"T":"F")."</td>";
+				  echo "<td>".($x&&$y?"T":"F")."</td>";
+				  echo "<td>".($x||$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$y?"T":"F")."</td>";
+				  echo "<td>".($x^$y^$x?"T":"F")."</td>";
+				  echo "<td>".(!($x&&$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x||!$y?"T":"F")."</td>";
+				  echo "<td>".(!($x||$y)?"T":"F")."</td>";
+				  echo "<td>".(!$x&&!$y?"T":"F")."</td>";
+			
+			?>
+              
             </tr>
       	  </tbody>
     	</table>
