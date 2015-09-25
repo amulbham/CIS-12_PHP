@@ -23,17 +23,22 @@
 			 <th>'.(($iRate+.03)*100).'% Savings</th><th>'.(($iRate+.04)*100).'% Savings</th>
 			 </tr>';
 			 //Fill the table by using a for-loop row by row
-			 do{
 			 for($year=1;$year<=$nYears;$year++){
-				 $prin*=(1+$iRate);
-				 $prin=number_format($prin,2,'.','');//Limiting to pennies with truncation
-				 echo '<tr>';
-				 	echo "<td>$year</td>";
-					echo '<td>$'.$prin.'</td>';
+                                 echo '<tr>';
+                                    echo "<td>$year</td>";
+					 do{
+                                            $prin*=(1+$iRate);
+                                            $prin=number_format($prin,2,'.','');//Limiting to pennies with truncation
+                                            echo '<td>$'.$prin.'</td>';
+                                                if ($iRate == .06){
+                                                    $flag = $prin;
+                                            }
+                                            $iRate+=.01;
+                                        }while($iRate<=.1);
 				 echo '</tr>';
+                                 $prin = $flag;
+                                 $iRate = .06;
 			 }
-			 $iRate+=.01;
-			 }while($iRate<=.1);
         	 echo '</table>';
         ?>
     </body>
