@@ -22,7 +22,7 @@ and open the template in the editor.
     </head>
    
     <body>
-        <h1>Electro Magnetic Spectrum -No Arrays</h1>
+        <h1><b>Electro Magnetic Spectrum -no arrays</b></h1>
         <?php
             //Declare Variables
                 $rows = 16;
