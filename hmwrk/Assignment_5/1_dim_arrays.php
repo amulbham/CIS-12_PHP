@@ -66,7 +66,7 @@ and open the template in the editor.
                 <th>Band(Radio to Gamma)</th></tr>';
                     
                     
-            //Output the arrays using a loop 
+            //Fill the table by using a for-loop row by row
 		for($count=0;$count<16;$count++){
                     echo '<tr>';
                     //Column 1
